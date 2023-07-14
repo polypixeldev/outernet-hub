@@ -1,1 +1,1 @@
-<h1 class="text-center w-full font-sans text-2xl">Home page</h1>
+<h1 class="w-full text-center font-sans text-2xl">Home page</h1>
