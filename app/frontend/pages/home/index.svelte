@@ -1,0 +1,1 @@
+<h1 class="text-center w-full font-sans text-2xl">Home page</h1>
