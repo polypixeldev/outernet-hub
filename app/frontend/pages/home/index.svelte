@@ -1,6 +1,6 @@
 <div class="grid grid-cols-2 gap-2 p-2">
   <div
-    class="z-20 flex w-full flex-row rounded-md bg-white p-2 dark:bg-zinc-800"
+    class="z-20 flex w-full flex-row justify-center rounded-3xl bg-white px-2 py-4 dark:bg-zinc-800"
   >
     <img
       src="/icons/wave.svg"
