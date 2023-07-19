@@ -1,15 +1,21 @@
-import axios from "axios";
+import axios from 'axios'
 
-import { createInertiaApp } from "@inertiajs/svelte";
+import Layout from '../pages/_layout.svelte'
 
-const pages = import.meta.glob("../pages/**/*.svelte");
+import { createInertiaApp } from '@inertiajs/svelte'
 
-const csrfToken = document.querySelector("meta[name=csrf-token]").content;
-axios.defaults.headers.common["X-CSRF-Token"] = csrfToken;
+const pages = import.meta.glob('../pages/**/*.svelte')
 
-createInertiaApp({
-  resolve: (name) => pages[`../pages/${name}.svelte`](),
-  setup({ el, App, props }) {
-    new App({ target: el, props });
+const csrfToken = document.querySelector('meta[name=csrf-token]').content
+axios.defaults.headers.common['X-CSRF-Token'] = csrfToken
+
+createInertiaApp({ 
+  resolve: async name => {
+    const page = await pages[`../pages/${name}.svelte`]()
+    return Object.assign({layout: Layout}, page)
   },
-});
+  setup({ el, App, props }) {
+    new App({ target: el, props })
+  },
+})
+

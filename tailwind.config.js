@@ -2,7 +2,11 @@
 export default {
   content: ["./app/**/*.html.erb", "./app/**/*.svelte"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        sky: "#87CEEB"
+      }
+    },
   },
   plugins: [],
 };
