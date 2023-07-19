@@ -4,8 +4,17 @@
   <img
     src="/images/mountains.png"
     alt="Mountains"
-    class="fixed bottom-0 w-screen"
+    class="fixed bottom-0 z-10 w-screen"
   />
-  <img src="/images/ground.png" alt="Ground" class="fixed bottom-0 w-screen" />
+  <img
+    src="/images/ground.png"
+    alt="Ground"
+    class="fixed bottom-0 z-10 w-screen"
+  />
+  <img
+    src="/images/topology.png"
+    alt="Topology"
+    class="fixed hidden h-screen w-screen dark:block"
+  />
   <slot />
 </div>
