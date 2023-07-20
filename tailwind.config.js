@@ -9,6 +9,7 @@ export default {
         'night-light': 'rgba(10,9,56,0)',
         greenish: '#659963',
         purple: '#816399',
+        brownish: '#7F5A52',
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],

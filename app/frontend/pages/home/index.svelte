@@ -148,5 +148,48 @@
         </p>
       </div>
     </div>
+    <div
+      class="z-20 my-2 flex w-full flex-col rounded-3xl bg-white px-2 py-4 dark:bg-zinc-800"
+    >
+      <div class="flex w-full items-center justify-start pb-2 pl-2">
+        <img
+          src="/icons/events.svg"
+          alt="Events"
+          class="h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12"
+        />
+        <p
+          class="ml-2 font-inter text-3xl font-black text-brownish md:text-4xl lg:text-5xl"
+        >
+          Events
+        </p>
+      </div>
+      <div
+        class="my-2 flex flex-col pl-5 font-inter text-lg text-black dark:text-white md:text-xl lg:text-2xl"
+      >
+        <div class="flex items-center">
+          <p class="font-extrabold">Breakfast!</p>
+          <p class="pl-2 font-semibold">10:30 @ Faith</p>
+        </div>
+        <p class="font-semibold">Today's breakfast is pancakes and waffles!</p>
+      </div>
+      <div
+        class="my-2 flex flex-col pl-5 font-inter text-lg text-black dark:text-white md:text-xl lg:text-2xl"
+      >
+        <div class="flex items-center">
+          <p class="font-extrabold">Breakfast!</p>
+          <p class="pl-2 font-semibold">10:30 @ Faith</p>
+        </div>
+        <p class="font-semibold">Today's breakfast is pancakes and waffles!</p>
+      </div>
+      <div
+        class="my-2 flex flex-col pl-5 font-inter text-lg text-black dark:text-white md:text-xl lg:text-2xl"
+      >
+        <div class="flex items-center">
+          <p class="font-extrabold">Breakfast!</p>
+          <p class="pl-2 font-semibold">10:30 @ Faith</p>
+        </div>
+        <p class="font-semibold">Today's breakfast is pancakes and waffles!</p>
+      </div>
+    </div>
   </div>
 </div>
