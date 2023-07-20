@@ -91,7 +91,7 @@
         class="h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12"
       />
       <p
-        class="ml-2 font-inter text-3xl font-black text-green-400 md:text-4xl lg:text-5xl"
+        class="ml-2 font-inter text-3xl font-black text-lightblue md:text-4xl lg:text-5xl"
       >
         Chat
       </p>
@@ -119,7 +119,7 @@
         class="h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12"
       />
       <p
-        class="ml-2 font-inter text-3xl font-black text-lime-700 md:text-4xl lg:text-5xl"
+        class="ml-2 font-inter text-3xl font-black text-green md:text-4xl lg:text-5xl"
       >
         Scrapbook
       </p>
@@ -133,7 +133,7 @@
         class="h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12"
       />
       <p
-        class="ml-2 font-inter text-3xl font-black text-orange-400 md:text-4xl lg:text-5xl"
+        class="ml-2 font-inter text-3xl font-black text-yellow md:text-4xl lg:text-5xl"
       >
         Workshops
       </p>

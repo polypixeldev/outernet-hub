@@ -10,6 +10,9 @@ export default {
         greenish: '#659963',
         purple: '#816399',
         brownish: '#7F5A52',
+        lightblue: '#5BB58A',
+        green: '#3D9D02',
+        yellow: '#D0A73D',
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
