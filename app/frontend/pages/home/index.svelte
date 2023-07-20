@@ -1,3 +1,7 @@
+<script>
+  const date = new Date();
+</script>
+
 <div class="grid grid-cols-1 gap-2 p-2 md:grid-cols-2">
   <div class="flex w-full flex-col items-center justify-start">
     <div
@@ -20,7 +24,7 @@
       >
         <p class="text-2xl md:text-3xl lg:text-4xl">Day</p>
         <p class="text-5xl md:text-6xl lg:text-7xl">
-          {new Date().getDate() - 27}
+          {date.getDate() - 27}
         </p>
       </div>
       <div
@@ -30,13 +34,17 @@
           class="flex h-28 w-28 flex-col items-start rounded-3xl bg-white p-4 font-inter font-black text-greenish dark:bg-zinc-800 md:h-32 md:w-32 lg:h-36 lg:w-36"
         >
           <p class="text-2xl md:text-3xl lg:text-4xl">JUL</p>
-          <p class="text-5xl md:text-6xl lg:text-7xl">{new Date().getDate()}</p>
+          <p class="text-5xl md:text-6xl lg:text-7xl">{date.getDate()}</p>
         </div>
         <div
           class="ml-5 flex h-28 w-28 flex-col items-start justify-evenly rounded-3xl bg-white p-4 font-inter text-4xl font-black text-greenish dark:bg-zinc-800 md:h-32 md:w-32 md:text-5xl lg:h-36 lg:w-36 lg:text-6xl"
         >
-          <p>{new Date().getHours()}:</p>
-          <p>{new Date().getMinutes()}</p>
+          <p>{date.getHours()}:</p>
+          <p>
+            {date.getMinutes() < 10
+              ? `0${date.getMinutes()}`
+              : date.getMinutes()}
+          </p>
         </div>
       </div>
     </div>
