@@ -18,7 +18,7 @@
         hub.outernet
       </h1>
     </div>
-    <div class="z-20 my-2 flex w-full justify-around">
+    <div class="z-20 my-2 flex w-full justify-evenly">
       <div
         class="flex h-28 w-28 flex-col items-start rounded-3xl bg-white p-4 font-inter font-black text-greenish dark:bg-zinc-800 md:h-32 md:w-32 lg:h-36 lg:w-36"
       >
