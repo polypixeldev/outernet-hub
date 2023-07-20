@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   root 'home#index'
   get 'announcements', to: 'announcements#index'
   get 'guilds', to: 'guilds#index'
+  get 'workshops', to: 'workshops#index'
 end

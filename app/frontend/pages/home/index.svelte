@@ -114,8 +114,9 @@
         Scrapbook
       </p>
     </div>
-    <div
+    <a
       class="z-20 my-2 flex w-full flex-row items-center rounded-3xl bg-white p-4 dark:bg-zinc-800"
+      href="/workshops"
     >
       <img
         src="/icons/workshops.svg"
@@ -127,7 +128,7 @@
       >
         Workshops
       </p>
-    </div>
+    </a>
   </div>
   <div class="flex w-full flex-col items-center justify-start">
     <div
