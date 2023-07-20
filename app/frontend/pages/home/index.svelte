@@ -43,7 +43,7 @@
     <div
       class="z-20 my-2 flex w-full flex-col rounded-3xl bg-white px-2 py-4 dark:bg-zinc-800"
     >
-      <div class="flex w-full items-center justify-center pb-2">
+      <div class="flex w-full items-center justify-start pb-2 pl-2">
         <img
           src="/icons/announcement.svg"
           alt="Announcement"
@@ -129,6 +129,24 @@
       >
         Workshops
       </p>
+    </div>
+  </div>
+  <div class="flex w-full flex-col items-center justify-start">
+    <div
+      class="z-20 my-2 flex w-full flex-col rounded-3xl bg-white px-2 py-4 dark:bg-zinc-800"
+    >
+      <div class="flex w-full items-center justify-start pb-2">
+        <img
+          src="/icons/pin.svg"
+          alt="Pin"
+          class="h-10 w-10 md:h-12 md:w-12 lg:h-14 lg:w-14"
+        />
+        <p
+          class="ml-2 font-inter text-3xl font-black text-purple md:text-4xl lg:text-5xl"
+        >
+          Map
+        </p>
+      </div>
     </div>
   </div>
 </div>
