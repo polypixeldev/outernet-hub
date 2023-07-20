@@ -74,5 +74,61 @@
         <p class="font-semibold">I have an announcement to make!</p>
       </div>
     </div>
+    <div
+      class="z-20 my-2 flex w-full flex-row items-center rounded-3xl bg-white p-4 dark:bg-zinc-800"
+    >
+      <img
+        src="/icons/chat.svg"
+        alt="Chat bubble"
+        class="h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12"
+      />
+      <p
+        class="ml-2 font-inter text-3xl font-black text-green-400 md:text-4xl lg:text-5xl"
+      >
+        Chat
+      </p>
+    </div>
+    <div
+      class="z-20 my-2 flex w-full flex-row items-center rounded-3xl bg-white p-4 dark:bg-zinc-800"
+    >
+      <img
+        src="/icons/guilds.svg"
+        alt="Star"
+        class="h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12"
+      />
+      <p
+        class="ml-2 font-inter text-3xl font-black text-slate-600 md:text-4xl lg:text-5xl"
+      >
+        Guilds
+      </p>
+    </div>
+    <div
+      class="z-20 my-2 flex w-full flex-row items-center rounded-3xl bg-white p-4 dark:bg-zinc-800"
+    >
+      <img
+        src="/icons/scrapbook.svg"
+        alt="Code icon"
+        class="h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12"
+      />
+      <p
+        class="ml-2 font-inter text-3xl font-black text-lime-700 md:text-4xl lg:text-5xl"
+      >
+        Scrapbook
+      </p>
+    </div>
+    <div
+      class="z-20 my-2 flex w-full flex-row items-center rounded-3xl bg-white p-4 dark:bg-zinc-800"
+    >
+      <img
+        src="/icons/workshops.svg"
+        alt="Code event icon"
+        class="h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12"
+      />
+      <p
+        class="ml-2 font-inter text-3xl font-black text-orange-400 md:text-4xl lg:text-5xl"
+      >
+        Workshops
+      </p>
+    </div>
   </div>
 </div>
