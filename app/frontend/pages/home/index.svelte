@@ -1,23 +1,11 @@
 <script>
+  import HeaderCard from '../../components/header_card.svelte';
   const date = new Date();
 </script>
 
 <div class="grid grid-cols-1 gap-2 p-2 md:grid-cols-2">
   <div class="flex w-full flex-col items-center justify-start">
-    <div
-      class="z-20 my-2 flex w-full flex-row justify-center rounded-3xl bg-white px-2 py-4 dark:bg-zinc-800"
-    >
-      <img
-        src="/icons/wave.svg"
-        alt="Wave"
-        class="h-10 w-10 md:h-12 md:w-12 lg:h-14 lg:w-14"
-      />
-      <h1
-        class="ml-2 font-inter text-4xl font-black text-amber-700 md:text-5xl lg:text-6xl"
-      >
-        hub.outernet
-      </h1>
-    </div>
+    <HeaderCard />
     <div class="z-20 my-2 flex w-full justify-evenly">
       <div
         class="flex h-28 w-28 flex-col items-start rounded-3xl bg-white p-4 font-inter font-black text-greenish dark:bg-zinc-800 md:h-32 md:w-32 lg:h-36 lg:w-36"
@@ -48,8 +36,9 @@
         </div>
       </div>
     </div>
-    <div
-      class="z-20 my-2 flex w-full flex-col rounded-3xl bg-white px-2 py-4 dark:bg-zinc-800"
+    <a
+      class="z-20 my-2 flex w-full cursor-pointer flex-col rounded-3xl bg-white px-2 py-4 dark:bg-zinc-800"
+      href="/announcements"
     >
       <div class="flex w-full items-center justify-start pb-2 pl-2">
         <img
@@ -81,7 +70,7 @@
         </div>
         <p class="font-semibold">I have an announcement to make!</p>
       </div>
-    </div>
+    </a>
     <div
       class="z-20 my-2 flex w-full flex-row items-center rounded-3xl bg-white p-4 dark:bg-zinc-800"
     >
