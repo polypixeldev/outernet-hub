@@ -147,8 +147,9 @@
         </p>
       </div>
     </div>
-    <div
+    <a
       class="z-20 my-2 flex w-full flex-col rounded-3xl bg-white px-2 py-4 dark:bg-zinc-800"
+      href="/events"
     >
       <div class="flex w-full items-center justify-start pb-2 pl-2">
         <img
@@ -189,6 +190,6 @@
         </div>
         <p class="font-semibold">Today's breakfast is pancakes and waffles!</p>
       </div>
-    </div>
+    </a>
   </div>
 </div>

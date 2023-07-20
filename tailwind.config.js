@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./app/**/*.html.erb', './app/**/*.svelte'],
+  safelist: ['bg-yellow', 'bg-green', 'bg-lightblue', 'bg-red-600'],
   theme: {
     extend: {
       colors: {

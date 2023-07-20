@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get 'announcements', to: 'announcements#index'
   get 'guilds', to: 'guilds#index'
   get 'workshops', to: 'workshops#index'
+  get 'events', to: 'events#index'
 end
