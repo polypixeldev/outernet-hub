@@ -5,7 +5,7 @@
 <div class="grid grid-cols-1 gap-2 p-2 md:grid-cols-2">
   <HeaderCard />
   <div
-    class="z-20 my-2 flex w-full flex-row justify-center rounded-3xl bg-white px-2 py-4 dark:bg-zinc-800"
+    class="z-20 my-2 flex w-full flex-row items-center justify-center rounded-3xl bg-white px-2 py-4 dark:bg-zinc-800"
   >
     <img
       src="/icons/announcement.svg"

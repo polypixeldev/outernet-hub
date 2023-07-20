@@ -3,4 +3,5 @@
 Rails.application.routes.draw do
   root 'home#index'
   get 'announcements', to: 'announcements#index'
+  get 'guilds', to: 'guilds#index'
 end

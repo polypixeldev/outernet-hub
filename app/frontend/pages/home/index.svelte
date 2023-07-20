@@ -85,8 +85,9 @@
         Chat
       </p>
     </div>
-    <div
+    <a
       class="z-20 my-2 flex w-full flex-row items-center rounded-3xl bg-white p-4 dark:bg-zinc-800"
+      href="/guilds"
     >
       <img
         src="/icons/guilds.svg"
@@ -98,7 +99,7 @@
       >
         Guilds
       </p>
-    </div>
+    </a>
     <div
       class="z-20 my-2 flex w-full flex-row items-center rounded-3xl bg-white p-4 dark:bg-zinc-800"
     >
