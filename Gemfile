@@ -61,3 +61,5 @@ end
 gem 'inertia_rails', '~> 3.0'
 
 gem 'vite_rails', '~> 3.0'
+
+gem "matrix_sdk", "~> 2.8"

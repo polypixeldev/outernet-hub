@@ -20,5 +20,10 @@ module OuternetHub
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    config.x.matrix.server = ENV['MATRIX_SERVER']
+    config.x.matrix.name = ENV['MATRIX_NAME']
+    config.x.matrix.username = ENV['MATRIX_USERNAME']
+    config.x.matrix.password = ENV['MATRIX_PASSWORD']
   end
 end

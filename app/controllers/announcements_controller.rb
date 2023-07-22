@@ -1,5 +1,10 @@
+require 'matrix_sdk'
+
 class AnnouncementsController < ApplicationController
+	include MatrixClient
+
 	def index
-		render inertia: 'announcements/index'
-	  end
+		announcements = get_announcements
+		render inertia: 'announcements/index', props: { announcements: announcements.reverse! }
+	end
 end

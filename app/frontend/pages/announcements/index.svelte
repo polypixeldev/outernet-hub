@@ -1,5 +1,6 @@
 <script>
   import HeaderCard from '../../components/header_card.svelte';
+  export let announcements;
 </script>
 
 <div class="grid grid-cols-1 gap-2 p-2 md:grid-cols-2">
@@ -20,31 +21,19 @@
   </div>
 </div>
 <div class="flex w-full flex-col items-center">
-  <div
-    class="z-20 my-2 flex w-5/6 flex-col rounded-3xl bg-white p-4 pl-5 font-inter text-lg text-black dark:bg-zinc-800 dark:text-white md:text-xl lg:text-2xl"
-  >
-    <div class="flex items-center">
-      <p class="font-extrabold">Sam Poder</p>
-      <p class="pl-2 font-semibold">10:30</p>
+  {#each announcements as announcement}
+    <div
+      class="z-20 my-2 flex w-5/6 flex-col rounded-3xl bg-white p-4 pl-5 font-inter text-lg text-black dark:bg-zinc-800 dark:text-white md:text-xl lg:text-2xl"
+    >
+      <div class="flex items-center">
+        <p class="font-extrabold">
+          {announcement.sender.split(':')[0].slice(1)}
+        </p>
+        <p class="pl-2 font-semibold">
+          {new Date(announcement.timestamp).toLocaleString()}
+        </p>
+      </div>
+      <p class="font-semibold">{announcement.body}</p>
     </div>
-    <p class="font-semibold">I have an announcement to make!</p>
-  </div>
-  <div
-    class="z-20 my-2 flex w-5/6 flex-col rounded-3xl bg-white p-4 pl-5 font-inter text-lg text-black dark:bg-zinc-800 dark:text-white md:text-xl lg:text-2xl"
-  >
-    <div class="flex items-center">
-      <p class="font-extrabold">Sam Poder</p>
-      <p class="pl-2 font-semibold">10:30</p>
-    </div>
-    <p class="font-semibold">I have an announcement to make!</p>
-  </div>
-  <div
-    class="z-20 my-2 flex w-5/6 flex-col rounded-3xl bg-white p-4 pl-5 font-inter text-lg text-black dark:bg-zinc-800 dark:text-white md:text-xl lg:text-2xl"
-  >
-    <div class="flex items-center">
-      <p class="font-extrabold">Sam Poder</p>
-      <p class="pl-2 font-semibold">10:30</p>
-    </div>
-    <p class="font-semibold">I have an announcement to make!</p>
-  </div>
+  {/each}
 </div>

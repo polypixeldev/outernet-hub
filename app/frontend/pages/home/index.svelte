@@ -1,5 +1,7 @@
 <script>
   import HeaderCard from '../../components/header_card.svelte';
+  export let announcements;
+
   const date = new Date();
 </script>
 
@@ -52,24 +54,22 @@
           Announcements
         </p>
       </div>
-      <div
-        class="my-2 flex flex-col pl-5 font-inter text-lg text-black dark:text-white md:text-xl lg:text-2xl"
-      >
-        <div class="flex items-center">
-          <p class="font-extrabold">Sam Poder</p>
-          <p class="pl-2 font-semibold">10:30</p>
+
+      {#each announcements as announcement}
+        <div
+          class="my-2 flex flex-col pl-5 font-inter text-lg text-black dark:text-white md:text-xl lg:text-2xl"
+        >
+          <div class="flex items-center">
+            <p class="font-extrabold">
+              {announcement.sender.split(':')[0].slice(1)}
+            </p>
+            <p class="pl-2 font-semibold">
+              {new Date(announcement.timestamp).toLocaleString()}
+            </p>
+          </div>
+          <p class="font-semibold">{announcement.body}</p>
         </div>
-        <p class="font-semibold">I have an announcement to make!</p>
-      </div>
-      <div
-        class="my-2 flex flex-col pl-5 font-inter text-lg text-black dark:text-white md:text-xl lg:text-2xl"
-      >
-        <div class="flex items-center">
-          <p class="font-extrabold">Sam Poder</p>
-          <p class="pl-2 font-semibold">10:30</p>
-        </div>
-        <p class="font-semibold">I have an announcement to make!</p>
-      </div>
+      {/each}
     </a>
     <div
       class="z-20 my-2 flex w-full flex-row items-center rounded-3xl bg-white p-4 dark:bg-zinc-800"
