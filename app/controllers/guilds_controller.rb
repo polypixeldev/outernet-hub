@@ -1,5 +1,6 @@
 class GuildsController < ApplicationController
 	def index
-		render inertia: 'guilds/index'
+		guilds = Guild.all
+		render inertia: 'guilds/index', props: { guilds: guilds }
 	end
 end

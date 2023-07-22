@@ -1,5 +1,16 @@
 <script>
   import HeaderCard from '../../components/header_card.svelte';
+  export let guilds;
+
+  const colors = [
+    'greenish',
+    'purple',
+    'brownish',
+    'lightblue',
+    'green',
+    'yellow',
+    'red-600',
+  ];
 </script>
 
 <div class="grid grid-cols-1 gap-2 p-2 md:grid-cols-2">
@@ -20,15 +31,18 @@
   </div>
 </div>
 <div class="mx-2 flex w-full flex-row flex-wrap items-center justify-center">
-  {#each Array(25).fill(0) as i}
-    <div class="z-20 m-2 rounded-3xl bg-white p-4 dark:bg-zinc-800">
+  {#each guilds as guild}
+    <a
+      class="z-20 m-2 rounded-3xl bg-white p-4 dark:bg-zinc-800"
+      href={guild.website}
+    >
       <p
-        class="font-inter text-3xl font-black text-slate-600 md:text-4xl lg:text-5xl"
+        class={`font-inter text-3xl font-black text-${
+          colors[Math.floor(Math.random() * (colors.length - 1))]
+        } md:text-4xl lg:text-5xl`}
       >
-        {Array(Math.round(Math.random() * 14) + 6)
-          .fill('G')
-          .join('')}
+        {guild.name}
       </p>
-    </div>
+    </a>
   {/each}
 </div>
