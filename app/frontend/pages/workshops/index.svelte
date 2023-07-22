@@ -1,5 +1,7 @@
 <script>
   import HeaderCard from '../../components/header_card.svelte';
+  export let upcoming_workshops;
+  export let past_workshops;
 </script>
 
 <div class="grid grid-cols-1 gap-2 p-2 md:grid-cols-2">
@@ -28,58 +30,51 @@
   </p>
 </div>
 <div class="my-4 flex w-full flex-col items-center">
+  {#each upcoming_workshops as workshop}
+    <div
+      class="z-20 my-2 flex w-5/6 flex-col rounded-3xl bg-white p-4 pl-5 font-inter text-lg text-black dark:bg-zinc-800 dark:text-white md:text-xl lg:text-2xl"
+    >
+      <p>
+        <span class="font-extrabold">{workshop.title}</span>
+        with
+        <span class="font-extrabold">{workshop.person}</span>!
+      </p>
+      <p>
+        <span class="font-bold"
+          >{new Date(workshop.datetime).toLocaleString()}</span
+        >
+        in
+        <span class="font-bold">{workshop.location}</span>
+      </p>
+      <p>&nbsp;</p>
+      <p>
+        {workshop.description}
+      </p>
+    </div>
+  {/each}
   <div
-    class="z-20 my-2 flex w-5/6 flex-col rounded-3xl bg-white p-4 pl-5 font-inter text-lg text-black dark:bg-zinc-800 dark:text-white md:text-xl lg:text-2xl"
-  >
-    <p>
-      <span class="font-extrabold">Build your first full-stack website</span>
-      with
-      <span class="font-extrabold">Toby Brown!</span>
-    </p>
-    <p>
-      Starting at <span class="font-bold">14:00</span> in
-      <span class="font-bold">the Barn</span>
-    </p>
-    <p>&nbsp;</p>
-    <p>
-      You'll learn how to put together your own personal website and guestbook
-      using a template called Conifer!
-    </p>
-  </div>
-  <div
-    class="z-20 my-2 flex w-5/6 flex-col rounded-3xl bg-white p-4 pl-5 font-inter text-lg text-black dark:bg-zinc-800 dark:text-white md:text-xl lg:text-2xl"
-  >
-    <p>
-      <span class="font-extrabold">Build your first full-stack website</span>
-      with
-      <span class="font-extrabold">Toby Brown!</span>
-    </p>
-    <p>
-      Starting at <span class="font-bold">14:00</span> in
-      <span class="font-bold">the Barn</span>
-    </p>
-    <p>&nbsp;</p>
-    <p>
-      You'll learn how to put together your own personal website and guestbook
-      using a template called Conifer!
-    </p>
-  </div>
-  <div
-    class="z-20 my-2 flex w-5/6 flex-col rounded-3xl bg-white p-4 pl-5 font-inter text-lg text-black dark:bg-zinc-800 dark:text-white md:text-xl lg:text-2xl"
-  >
-    <p>
-      <span class="font-extrabold">Build your first full-stack website</span>
-      with
-      <span class="font-extrabold">Toby Brown!</span>
-    </p>
-    <p>
-      Starting at <span class="font-bold">14:00</span> in
-      <span class="font-bold">the Barn</span>
-    </p>
-    <p>&nbsp;</p>
-    <p>
-      You'll learn how to put together your own personal website and guestbook
-      using a template called Conifer!
-    </p>
-  </div>
+    class="relative z-20 my-3 h-2 w-5/6 rounded-lg bg-gray-400 dark:bg-gray-600"
+  />
+  {#each past_workshops as workshop}
+    <div
+      class="z-20 my-2 flex w-5/6 flex-col rounded-3xl bg-white p-4 pl-5 font-inter text-lg text-black dark:bg-zinc-800 dark:text-white md:text-xl lg:text-2xl"
+    >
+      <p>
+        <span class="font-extrabold">{workshop.title}</span>
+        with
+        <span class="font-extrabold">{workshop.person}</span>!
+      </p>
+      <p>
+        <span class="font-bold"
+          >{new Date(workshop.datetime).toLocaleString()}</span
+        >
+        in
+        <span class="font-bold">{workshop.location}</span>
+      </p>
+      <p>&nbsp;</p>
+      <p>
+        {workshop.description}
+      </p>
+    </div>
+  {/each}
 </div>

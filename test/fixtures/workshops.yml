@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  person: MyString
+  datetime: 2023-07-21 22:19:41
+  location: MyString
+  description: MyText
+
+two:
+  title: MyString
+  person: MyString
+  datetime: 2023-07-21 22:19:41
+  location: MyString
+  description: MyText
