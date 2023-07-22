@@ -1,6 +1,7 @@
 <script>
   import HeaderCard from '../../components/header_card.svelte';
   export let announcements;
+  export let chat_server;
 
   const date = new Date();
 </script>
@@ -71,8 +72,9 @@
         </div>
       {/each}
     </a>
-    <div
+    <a
       class="z-20 my-2 flex w-full flex-row items-center rounded-3xl bg-white p-4 dark:bg-zinc-800"
+      href={`http://${chat_server}`}
     >
       <img
         src="/icons/chat.svg"
@@ -84,7 +86,7 @@
       >
         Chat
       </p>
-    </div>
+    </a>
     <a
       class="z-20 my-2 flex w-full flex-row items-center rounded-3xl bg-white p-4 dark:bg-zinc-800"
       href="/guilds"

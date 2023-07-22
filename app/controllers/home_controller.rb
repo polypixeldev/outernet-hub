@@ -5,6 +5,6 @@ class HomeController < ApplicationController
 
   def index
     announcements = get_announcements
-    render inertia: 'home/index', props: { announcements: announcements.reverse!.take(2) }
+    render inertia: 'home/index', props: { announcements: announcements.reverse!.take(2), chat_server: Rails.configuration.x.matrix.name }
   end
 end
