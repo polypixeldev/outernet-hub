@@ -1,5 +1,6 @@
 <script>
   import HeaderCard from '../../components/header_card.svelte';
+  export let events;
 
   const days = [
     ['Friday', 'green'],
@@ -29,6 +30,18 @@
     '11:00 pm',
     '12:00 am',
   ];
+
+  function timeToTicks(datetime) {
+    console.log(datetime);
+    let result = 0;
+    result += datetime.getHours() * 60;
+    result += datetime.getMinutes();
+
+    result -= 7 * 60; // schedule starts at 7am
+    result = result / 30; // each tick is 30 mins
+
+    return result;
+  }
 </script>
 
 <div class="grid grid-cols-1 gap-2 p-2 md:grid-cols-2">
@@ -71,7 +84,25 @@
         }}>&gt;</button
       >
     </div>
-    <ul class="list-bg-none my-2">
+    <ul class="relative my-2 list-none text-white">
+      {#each events.filter(e => new Date(e.start).getDate() - 28 == dayIdx) as event}
+        <div
+          style={`top: ${
+            36 * (timeToTicks(new Date(event.start)) + 0.5)
+          }px; height: ${
+            36 *
+              (timeToTicks(new Date(event.end)) -
+                timeToTicks(new Date(event.start))) -
+            1
+          }px`}
+          class={`bg-blue absolute left-[5em] right-[1em] z-30 rounded-md bg-${days[dayIdx][1]} rounded-md pl-2 text-lg`}
+        >
+          <p class="font-bold">{event.title}</p>
+          <p>Location: {event.location}</p>
+        </div>
+      {/each}
+    </ul>
+    <ul class="my-2 list-none">
       {#each times as time}
         <li
           class="relative h-9 before:absolute before:bottom-0 before:left-[5em] before:top-0 before:w-[1px] before:bg-gray-300 after:absolute after:bottom-4 after:left-[5em] after:right-1 after:h-[1px] after:bg-gray-300 first:before:top-1/2 last:before:bottom-1/2"

@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
 	def index
-		render inertia: 'events/index'
+		events = Event.all
+		render inertia: 'events/index', props: { events: events }
 	end
 end
