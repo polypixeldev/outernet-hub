@@ -2,6 +2,7 @@
   import HeaderCard from '../../components/header_card.svelte';
   export let announcements;
   export let chat_server;
+  export let events;
 
   const date = new Date();
 </script>
@@ -166,33 +167,23 @@
           Events
         </p>
       </div>
-      <div
-        class="my-2 flex flex-col pl-5 font-inter text-lg text-black dark:text-white md:text-xl lg:text-2xl"
-      >
-        <div class="flex items-center">
-          <p class="font-extrabold">Breakfast!</p>
-          <p class="pl-2 font-semibold">10:30 @ Faith</p>
+      {#each events as event}
+        <div
+          class="my-3 flex flex-col items-start pl-5 font-inter text-lg text-black dark:text-white md:text-xl lg:text-2xl"
+        >
+          <p class="font-extrabold">
+            {event.title}
+          </p>
+          <p>
+            {new Date(event.start).getMonth() + 1}/{new Date(
+              event.start
+            ).getDate()}
+            from {new Date(event.start).toLocaleTimeString()} to {new Date(
+              event.end
+            ).toLocaleTimeString()} @ {event.location}
+          </p>
         </div>
-        <p class="font-semibold">Today's breakfast is pancakes and waffles!</p>
-      </div>
-      <div
-        class="my-2 flex flex-col pl-5 font-inter text-lg text-black dark:text-white md:text-xl lg:text-2xl"
-      >
-        <div class="flex items-center">
-          <p class="font-extrabold">Breakfast!</p>
-          <p class="pl-2 font-semibold">10:30 @ Faith</p>
-        </div>
-        <p class="font-semibold">Today's breakfast is pancakes and waffles!</p>
-      </div>
-      <div
-        class="my-2 flex flex-col pl-5 font-inter text-lg text-black dark:text-white md:text-xl lg:text-2xl"
-      >
-        <div class="flex items-center">
-          <p class="font-extrabold">Breakfast!</p>
-          <p class="pl-2 font-semibold">10:30 @ Faith</p>
-        </div>
-        <p class="font-semibold">Today's breakfast is pancakes and waffles!</p>
-      </div>
+      {/each}
     </a>
   </div>
 </div>
