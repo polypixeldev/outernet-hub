@@ -8,7 +8,8 @@
     ['Sunday', 'yellow'],
     ['Monday', 'red-600'],
   ];
-  let dayIdx = 0;
+  let dayIdx = new Date().getDate() - 28;
+  if (dayIdx < 0) dayIdx = 0;
 
   const times = [
     '7:00 am',
@@ -95,7 +96,7 @@
                 timeToTicks(new Date(event.start))) -
             1
           }px`}
-          class={`bg-blue absolute left-[5em] right-[1em] z-30 rounded-md bg-${days[dayIdx][1]} rounded-md pl-2 text-lg`}
+          class={`bg-blue absolute left-[5em] right-[1em] z-30 rounded-md bg-${days[dayIdx][1]} overflow-hidden rounded-md pl-2 text-lg`}
         >
           <p class="font-bold">{event.title}</p>
           <p>Location: {event.location}</p>
