@@ -102,8 +102,9 @@
         Guilds
       </p>
     </a>
-    <div
+    <a
       class="z-20 my-2 flex w-full flex-row items-center rounded-3xl bg-white p-4 dark:bg-zinc-800"
+      href="http://scrapbook.outernet"
     >
       <img
         src="/icons/scrapbook.svg"
@@ -115,7 +116,7 @@
       >
         Scrapbook
       </p>
-    </div>
+    </a>
     <a
       class="z-20 my-2 flex w-full flex-row items-center rounded-3xl bg-white p-4 dark:bg-zinc-800"
       href="/workshops"
